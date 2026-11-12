@@ -5,3 +5,64 @@
 @media(max-width:650px){.container{width:min(100% - 32px,1160px)}.topline .container{justify-content:center}.topline .container>span{display:none}.brand strong{font-size:19px}.hero-grid{padding:55px 0 62px}.hero h1{font-size:clamp(2.35rem,9vw,3.45rem)}.hero-art{max-width:310px}.hero-frame{height:360px}.hero-note{font-size:11px}.hero-orbit-two{right:-10px}.opening,.reading-section,.related,.faq-section,.contact-area{padding:53px 0}.reading-section.short{padding:44px 0}.check-grid,.subtopic-grid,.related-grid{grid-template-columns:1fr}.section-visual{max-width:300px}.section-visual img{height:350px}.cta-inner{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.copyright{flex-direction:column}.copyright p:last-child{text-align:left}.contact-hero{padding:76px 0}.support-card{padding:28px}.support-list article{padding:20px}}
 @media(max-width:430px){.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.hero-buttons{align-items:stretch}.btn{width:100%}.hero-art{max-width:285px}.hero-frame{height:335px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.related-card{transition:none}}
+
+/* Tarotell: accessible Services dropdown */
+.nav-dropdown{position:relative;flex-shrink:0}
+.nav-dropdown-toggle{display:flex;align-items:center;gap:7px;padding:11px 2px;background:none;border:0;color:#3e4767;font-size:13px;font-weight:750;cursor:pointer}
+.nav-dropdown-toggle:hover,.nav-dropdown-toggle.current,.nav-dropdown-toggle[aria-expanded="true"]{color:#8a5d9c}
+.dropdown-chevron{font-size:16px;transition:transform .18s ease;line-height:1}
+.nav-dropdown.is-open .dropdown-chevron{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none;position:absolute;z-index:60;min-width:245px;top:calc(100% + 12px);left:-13px;padding:9px;border:1px solid #ebe4f1;border-radius:14px;box-shadow:0 22px 50px rgba(18,25,55,.15);background:#fff}
+.nav-dropdown.is-open .nav-dropdown-menu{display:grid;gap:3px}
+.nav-dropdown-menu a{display:block;padding:11px 13px;font-size:13px;font-weight:700;line-height:1.4;color:#3e4767;border-radius:9px;white-space:nowrap}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.current{background:#f4effa;color:#75518d}
+.nav-dropdown-toggle:focus-visible,.nav-dropdown-menu a:focus-visible{outline:3px solid #b18ac3;outline-offset:3px}
+/* Compact reading selection cards; no source copy is discarded */
+.reading-options-section .subtopic-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.reading-options-section .compact-tarot-card{padding:22px 20px;border-radius:18px;display:flex;flex-direction:column;min-height:0;box-shadow:0 8px 24px rgba(23,29,62,.06)}
+.reading-options-section .compact-tarot-card .star{font-size:24px;line-height:1}
+.reading-options-section .compact-tarot-card h3{font-size:21px;margin:9px 0 11px}
+.reading-options-section .compact-tarot-card .card-lead{font-size:14px;line-height:1.65;margin:0 0 15px}
+.reading-options-section .card-more{border-top:1px solid #ede5f0;padding-top:11px;margin:0 0 12px}
+.reading-options-section .card-more summary{cursor:pointer;color:#75518d;font-size:13px;font-weight:800;line-height:1.5;padding:4px 0;list-style:none}
+.reading-options-section .card-more summary::-webkit-details-marker{display:none}
+.reading-options-section .card-more summary:after{content:' +';font-size:17px;vertical-align:middle}
+.reading-options-section .card-more[open] summary:after{content:' −'}
+.reading-options-section .card-more[open] summary{margin-bottom:12px}
+.reading-options-section .card-more p{font-size:13px}
+.reading-options-section .card-more .check-grid{grid-template-columns:1fr;margin:10px 0 15px}
+.reading-options-section .compact-tarot-card .inline-action{margin:3px 0 0}
+.reading-options-section .compact-tarot-card .text-cta{font-size:13px;line-height:1.5;display:inline-block}
+/* Published resources: responsive iframes, no fixed pixel widths */
+.resource-section{padding:78px 0;background:#f1edf7}
+.resource-heading{max-width:740px;margin-bottom:30px}
+.resource-heading h2{font:600 clamp(2rem,3.2vw,3.1rem)/1.2 'Playfair Display',Georgia,serif;color:var(--navy);letter-spacing:-.8px;margin:0 0 12px}
+.resource-heading p{color:var(--muted);margin:0}
+.resource-card{background:#fff;border:1px solid #e5e0ee;border-radius:20px;padding:22px;margin-top:22px;box-shadow:0 12px 35px rgba(15,28,60,.06)}
+.resource-card h3{color:var(--navy);font:700 clamp(1.3rem,2.1vw,1.75rem)/1.3 'Playfair Display',Georgia,serif;margin:0 0 4px}
+.resource-type{color:#81639a;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 15px}
+.resource-frame{position:relative;width:100%;height:clamp(320px,48vw,550px);border-radius:12px;border:1px solid #e9e5f0;overflow:hidden;background:#faf9fd}
+.resource-frame-slides{aspect-ratio:960 / 569;height:auto}
+.resource-frame-sheet{height:clamp(340px,48vw,510px)}
+.resource-frame iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+@media(max-width:1100px){.reading-options-section .subtopic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.nav-dropdown{width:100%}.nav-dropdown-toggle{width:100%;justify-content:space-between;padding:11px;font-size:15px}.nav-dropdown-menu{position:static;min-width:0;box-shadow:none;border:0;border-left:2px solid #e5d6ed;border-radius:0;background:#faf7fd;margin:2px 0 6px 13px;padding:4px 7px}.nav-dropdown-menu a{white-space:normal;font-size:14px}}
+@media(max-width:650px){.reading-options-section .subtopic-grid{grid-template-columns:1fr}.resource-section{padding:53px 0}.resource-card{padding:15px}.resource-frame{height:390px}.resource-frame-slides{height:auto}.resource-frame-sheet{height:360px}}
+
+/* Homepage Google resource layout: document alone, slides + sheets together */
+.resource-section--document{padding-bottom:65px;}
+.resource-section--media{background:#faf8fd;padding-top:65px;}
+.resource-section--document .resource-heading,.resource-section--media .resource-heading{max-width:850px;}
+.resource-section--document .resource-card--featured{margin-top:0;}
+.resource-section--document .resource-frame-doc{height:clamp(420px,55vw,660px);}
+.resource-paired-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;}
+.resource-paired-grid>.resource-card{margin-top:0;min-width:0;}
+.resource-paired-grid .resource-frame-slides{aspect-ratio:960/569;height:auto;}
+.resource-paired-grid .resource-frame-sheet{height:clamp(310px,35vw,440px);}
+@media(max-width:780px){.resource-paired-grid{grid-template-columns:1fr;gap:20px;}
+.resource-section--document .resource-frame-doc{height:440px;}
+.resource-paired-grid .resource-frame-sheet{height:390px;}
+.resource-section--document{padding-bottom:50px;}
+.resource-section--media{padding-top:50px;}}
+@media(max-width:480px){.resource-section--document .resource-frame-doc{height:400px;}
+.resource-paired-grid .resource-frame-sheet{height:330px;}}
