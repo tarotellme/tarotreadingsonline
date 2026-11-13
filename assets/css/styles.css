@@ -66,3 +66,33 @@
 .resource-section--media{padding-top:50px;}}
 @media(max-width:480px){.resource-section--document .resource-frame-doc{height:400px;}
 .resource-paired-grid .resource-frame-sheet{height:330px;}}
+
+/* Nov 2026: equal media embeds and compact introductory illustration */
+.resource-section--media .resource-paired-grid{align-items:stretch;}
+.resource-section--media .resource-paired-grid > .resource-card{display:flex;flex-direction:column;min-width:0;height:100%;}
+.resource-section--media .resource-paired-grid .resource-frame,
+.resource-section--media .resource-paired-grid .resource-frame-slides,
+.resource-section--media .resource-paired-grid .resource-frame-sheet{height:clamp(340px,33vw,430px);aspect-ratio:auto;flex:1 0 auto;min-height:340px;}
+.resource-section--media .resource-paired-grid iframe{height:100%;width:100%;display:block;}
+.opening-grid .opening-aside{display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:22px;}
+.opening-grid .opening-aside h2{margin:0;}
+.opening-grid .opening-tarot-art{display:block;width:min(100%,205px);height:auto;max-height:240px;object-fit:contain;align-self:center;filter:drop-shadow(0 14px 22px rgba(23,37,68,.10));}
+@media(max-width:780px){
+.resource-section--media .resource-paired-grid .resource-frame,
+.resource-section--media .resource-paired-grid .resource-frame-slides,
+.resource-section--media .resource-paired-grid .resource-frame-sheet{height:390px;min-height:390px;}
+.opening-grid .opening-tarot-art{width:min(42vw,180px);max-height:195px;align-self:flex-start;}
+}
+@media(max-width:480px){
+.resource-section--media .resource-paired-grid .resource-frame,
+.resource-section--media .resource-paired-grid .resource-frame-slides,
+.resource-section--media .resource-paired-grid .resource-frame-sheet{height:330px;min-height:330px;}
+.opening-grid .opening-tarot-art{width:140px;max-height:165px;}
+}
+
+/* Tarotell opening illustrations: distinct imagery, generous editorial dimensions */
+.opening-grid .opening-aside{display:flex;justify-content:center;align-items:flex-start;min-width:0;}
+.opening-grid .opening-tarot-art--updated{width:min(100%,330px);height:auto;max-height:none;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:0 20px 52px rgba(18,31,65,.17);filter:none;display:block;}
+@media(min-width:901px){.opening-grid{grid-template-columns:minmax(0,34%) minmax(0,1fr);gap:clamp(36px,4.5vw,64px);}}
+@media(max-width:900px){.opening-grid .opening-aside{justify-content:flex-start}.opening-grid .opening-tarot-art--updated{width:min(75vw,310px);max-height:none;}}
+@media(max-width:480px){.opening-grid .opening-tarot-art--updated{width:min(70vw,260px);max-height:none;}}
