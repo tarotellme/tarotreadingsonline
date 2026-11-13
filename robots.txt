@@ -1,2 +1,4 @@
 User-agent: *
-Allow: /
+Allow: /tarotreadingsonline/
+
+Sitemap: https://tarotellme.github.io/tarotreadingsonline/sitemap.xml
