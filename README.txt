@@ -13,3 +13,14 @@ No iframe embeds. Contact: support@tarotell.me. No fake contact form.
 SEO: Per-page meta titles/descriptions from DOCX. Homepage Organization JSON-LD. Canonical and sitemap intentionally omitted until final hosting URL is selected. robots.txt is only authoritative when uploaded to the domain root.
 
 Safety: Tarot is presented as entertainment/self-reflection, not professional advice.
+
+
+URL NORMALIZATION FIX (GitHub Pages)
+- Canonical homepage: https://tarotellme.github.io/tarotreadingsonline/
+- Homepage and service index.html pages redirect in the browser to trailing-slash directory URLs.
+- GitHub Pages serves directory and index.html URLs as HTTP 200: browser JavaScript is not a 301/308 redirect.
+- Replace repository contents, including assets and three service folders. Do not upload the ZIP itself as a file.
+- Hard refresh after deployment, and check the address bar and link targets.
+- Sitemap: https://tarotellme.github.io/tarotreadingsonline/sitemap.xml
+- GitHub project site robots.txt inside /tarotreadingsonline/ is NOT the robots control file for the hostname: that is /robots.txt at the domain root.
+- All original content and 3 homepage iframe embeds are retained.
